@@ -133,9 +133,18 @@
               realName,phoneNum,emergencyTel,startTime,endTime,totalPrice,houseId
             }
           }).then(res => {
-            console.log(12345);          
+            console.log(res);
+            if(res.data.msg == 'success'){
+              window.location.href = 'order/confirmorder?order_num='+ res.data.order_num;                              
+            }else{
+              this.$message({
+                type: 'error',
+                message: '订单提交失败',
+                showClose: true,
+                duration: 1000              
+              });
+            }
           });
-          // window.location.href = 'order/confirmorder';
         },
         loadHouseData(){
           return new Promise((resolve) => {//解决异步请求相关问题

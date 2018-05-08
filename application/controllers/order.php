@@ -32,19 +32,21 @@ class Order extends CI_Controller {
     $end_time = $this -> input -> get('endTime');
     $total_price = $this -> input -> get('totalPrice');
     $house_id = $this -> input -> get('houseId');
-    $user_id = $this -> session -> userdata('loginedUser');
+    $user_id = $this -> session -> userdata('loginedUser')->user_id;
     $order_num= date("YmdHis").rand(10000,99999);//生成订单号
-    $house = $this -> house_model -> get_house_by_house_id($house_id);
-    $house_start_time = $house -> begin_time;
-    $house_end_time = $house -> end_time;
-    echo $order_num.'==='.$house_start_time.'==='.$house_end_time;
-    
-
-
-
-
-
-
+    $row = $this -> order_model -> save_order_info($real_name,$phone_num,$emergency_tel,$start_time,
+                                   $end_time,$total_price,$house_id,$user_id,$order_num);
+    if($row > 0){
+      $order_info = array(
+        'msg' => 'success',
+        'order_num' => $order_num
+      );
+    }else{
+      $order_info = array(
+        'msg' => 'fail',
+      );
+    }
+    echo json_encode($order_info);
   }
 
   // 订单详情
@@ -126,6 +128,17 @@ class Order extends CI_Controller {
       }else{
         echo 'fail';
       }
+    }
+  }
+
+  // 支付订单
+  public function pay_order(){
+    $order_num = $this -> input -> get('orderNum');
+    $row = $this -> order_model -> update_order_by_finish($order_num);
+    if($row > 0){
+      echo 'success';
+    }else{
+      echo 'fail';
     }
   }
 

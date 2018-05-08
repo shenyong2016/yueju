@@ -1,25 +1,25 @@
 body{
   background: #f0f0f0;
 }
-.submitsuccess{
-  width: 1170px;
-  margin: 30px auto;
-  background: #ffffff;
+
+.el-alert--success{
+  height: 50px;
+  background: #13ce66;
+  margin-top: 20px;
 }
 
-.el-alert {
-  width: 100%;
-  padding: 8px 16px;
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  position: relative;
-  background-color: #13ce66;
-  overflow: hidden;
+.el-icon-success,.el-alert__title,.el-icon-close{
   color: #fff;
-  opacity: 1;
-  display: flex;
-  align-items: center;
+}
+.el-icon-success,.el-icon-close{
+  font-size: 24px;
+}
+.el-alert__title{
+  font-size: 14px;
+  margin-left: 10px;
+}
+.el-message{
+  height: 42px;
 }
 .complate-order{
   background: url(../img/complate.png);

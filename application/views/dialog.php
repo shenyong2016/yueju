@@ -297,9 +297,14 @@
           username: username,
           password: password
         }, function(res){
+          console.log(res);
           if(res == 'success'){
             window.location = $url;
-          }else{
+          }else if(res == 1){
+            alert('用户名错误');
+          }else if(res == 2){
+            alert('密码错误');
+          }else if(res == 3){
             alert('用户名或密码错误');
           }
         }, 'text');

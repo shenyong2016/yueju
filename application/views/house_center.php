@@ -215,7 +215,7 @@
           houseSize: '',//房屋大小
           saleTypeList: [],
           saleType: '',
-          pageSize: 3,
+          pageSize: 6,
           page: 1,
           pageFlag: false,//设置当前页数的更新标识
         },

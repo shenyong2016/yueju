@@ -66,13 +66,36 @@ class Order_model extends CI_Model {
   }
 
   public function check_house_reserve_by_time($house_id){
-    // return $this -> db -> get_where('t_order', array(
-    //   'house_id' => $house_id
-    // )) -> result();
-    $sql = "select start_time, end_time from t_order where house_id=$house_id";
+    $sql = "select start_time, end_time from t_order where house_id=$house_id and is_delete = 0";
     return $this -> db -> query($sql) -> result();
   }
 
+  public function save_order_info($real_name,$phone_num,$emergency_tel,$start_time,
+                  $end_time,$total_price,$house_id,$user_id,$order_num){
+    $this -> db -> insert('t_order', array(
+      'real_name' => $real_name,
+      'phone_num' => $phone_num,
+      'emergency_tel' => $emergency_tel,
+      'start_time' => $start_time,
+      'end_time' => $end_time,
+      'total_price' => $total_price,
+      'house_id' => $house_id,
+    'user_id' => $user_id,
+      'order_num' => $order_num,
+      'is_finished' => 0,
+      'is_evaluate' => 0,
+      'is_delete' => 0
+    ));
+    return $this -> db -> affected_rows();
+  }
+
+  public function update_order_by_finish($order_num){
+    $this -> db -> where('order_num', $order_num);
+    $this -> db -> update('t_order', array(
+        'is_finished' => 1
+    ));
+    return $this -> db -> affected_rows();
+  }
 
 
 

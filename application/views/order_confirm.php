@@ -9,8 +9,9 @@
   <title>确认订单</title>
   <base href="<?php echo site_url();?>">
   <link rel="stylesheet" href="assets/css/common.css">  
-  <link rel="stylesheet" href="assets/css/confirmorder.css">
   <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">      
+  <link rel="stylesheet" href="assets/css/confirmorder.css">  
 </head>
 <body>
   <!-- header -->
@@ -18,17 +19,15 @@
   <!-- header -->
   <div id="confirmorder">
     <div class="wrapper">
-      <div class="submitsuccess">
-        <div class="el-alert">
-          <span class="complate-order"></span>
-          <span class="order-tishi">订单提交成功!</span>
-          <span class="close-order"></span>
-        </div>
-      </div>
+      <el-alert
+        title="订单提交成功"
+        type="success"
+        show-icon>
+      </el-alert>
       <div class="orderinfo">
         <div style="width: 90%;display: flex; margin: 0px auto; padding: 30px;">
           <span class="order-title">订单编号</span>
-          <span class="order-num">2018042409532387633</span>
+          <span class="order-num">{{orderInfo.order_num}}</span>
         </div>
         <span class="houseinfo-span1">入住信息：</span>
         <div style="width: 90%; margin: 0px auto; padding: 20px;">
@@ -42,9 +41,9 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>2018-04-25</td>
-                  <td>2018-04-26</td>
-                  <td class="third">悦居公寓 康泰嘉园 简约三室 三床房(哈尔滨市道里区群力新区滇池东路2129号（康泰嘉园南2门右侧）)</td>
+                  <td>{{orderInfo.start_time}}</td>
+                  <td>{{orderInfo.end_time}}</td>
+                  <td class="third">{{orderInfo.village_name}} {{orderInfo.house_name}}{{orderInfo.house_address}}</td>
                 </tr>
               </tbody>
             </table>
@@ -62,9 +61,9 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>沈勇</t>
-                  <td>13900000000</td>
-                  <td class="third">13900000000</td>
+                  <td>{{orderInfo.real_name}}</t>
+                  <td>{{orderInfo.phone_num}}</td>
+                  <td class="third">{{orderInfo.emergency_tel}}</td>
                 </tr>
               </tbody>
             </table>
@@ -73,10 +72,10 @@
         <span class="houseinfo-span1">订单费用：</span>        
         <div style="width: 90%;display: flex; margin: 0px auto; padding: 30px;">
           <span class="order-title">订单费用：</span>
-          <span class="order-num">￥358.00</span>
+          <span class="order-num">￥{{orderInfo.total_price}}.00</span>
         </div>
         <div class="commit">
-          <button v-on:click="commitOrder">提交订单</button>
+          <button v-on:click="commitOrder">去支付</button>
         </div>
       </div>
     </div>
@@ -84,19 +83,73 @@
   <!-- footer -->
   <?php include 'footer.php';?>
   <!-- footer -->
-
-
-
-
-
-  <input type="hidden" id="current-index" value="user">    
+  <input type="hidden" id="current-index" value="">    
   <script src="assets/js/jquery-1.12.4.min.js"></script>
   <script src="assets/js/header.js"></script>   
+  <script src="assets/js/vue.min.js"></script>
+  <script src="assets/js/axios.min.js"></script>  
+  <script src="assets/js/elementUI.js"></script> 
   <script>
     $('.close-order').on('click', function(){
       $('.submitsuccess').hide(400);
     });
-  
+
+    new Vue({
+      el: '#confirmorder',
+      data: {
+        orderNum: <?php echo $this->input->get('order_num');?>,
+        orderInfo: {}
+      },
+      methods: {
+        commitOrder(){
+          axios.get('order/pay_order', {
+            params: {
+              orderNum: this.orderNum
+            }
+          }).then(res => {
+            if(res.data == 'success'){
+              this.$message({
+                type: 'success',
+                message: '订单支付成功，即将跳到订单详情',
+                showClose: true,
+                duration: 2000            
+              });   
+              setTimeout(() => {
+                window.location.href = 'order/order_detail?orderNum='+this.orderNum;
+              }, 2000);   
+            }else{
+              this.$message({
+                type: 'error',
+                message: '订单支付失败',
+                showClose: true,
+                duration: 2000            
+              });
+            }
+          });
+        },
+        loadOrderInfo(){
+          axios.get('order/get_order_info', {
+            params: {
+              orderNum: this.orderNum
+            }
+          }).then(res => {
+            this.orderInfo = res.data.order;
+          });
+        }
+      },
+      created(){
+        this.orderNum = window.location.href.split('?')[1].split('=')[1];
+        this.$message({
+          type: 'success',
+          message: '恭喜你，订单提交成功',
+          showClose: true,
+          duration: 2000            
+        });
+        this.loadOrderInfo();
+        console.log(this.orderNum);
+      },
+    });
+    
   
   
   

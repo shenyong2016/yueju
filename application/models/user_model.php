@@ -7,6 +7,12 @@ class User_model extends CI_Model{
     )) -> row();
   }
 
+  public function check_password($password){
+    return $this -> db -> get_where('t_user', array(
+      'password' => $password
+    )) -> row();
+  }
+
   public function check_login($username, $password){
     return $this -> db -> get_where('t_user', array(
       'username' => $username, 

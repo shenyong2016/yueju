@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/css/common.css">  
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="assets/css/personCenter.css">
-  <!-- <link rel="stylesheet" href="assets/css/elementUI.css">   -->
+  <link rel="stylesheet" href="assets/css/elementUI.css">  
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">  
   <style>
     .pagination{

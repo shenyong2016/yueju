@@ -91,8 +91,6 @@
                   <li><span class="list-title">使用面积</span><p class="detail-info"><?php echo $house_info -> house_user_area;?></p></li>
                   <li><span class="list-title">建筑面积</span><p class="detail-info"><?php echo $house_info -> house_build_area;?></p></li>
                   <li><span class="list-title">交通情况</span><p class="detail-info"><?php echo $house_info -> house_traffic;?></p></li>
-                  <li><span class="list-title">基础设备</span><p class="detail-info"></p></li>
-                  <li><span class="list-title">可付费设备</span><p class="detail-info"></p></li>
                   <li><span class="list-title">房源详情</span><p class="detail-info"><?php echo $house_info -> house_details;?></p></li>
                 </ul>
               </div>
@@ -197,7 +195,7 @@
         alert('请选择入住时间或退房时间');
         return;
       }
-      // window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;
+      window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;
     });
 
 
