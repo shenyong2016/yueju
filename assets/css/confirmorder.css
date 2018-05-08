@@ -1,0 +1,134 @@
+body{
+  background: #f0f0f0;
+}
+.submitsuccess{
+  width: 1170px;
+  margin: 30px auto;
+  background: #ffffff;
+}
+
+.el-alert {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  background-color: #13ce66;
+  overflow: hidden;
+  color: #fff;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+}
+.complate-order{
+  background: url(../img/complate.png);
+}
+.close-order{
+  background: url(../img/close-order.png);
+  cursor: pointer;
+}
+.complate-order, .close-order{
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+.order-tishi{
+  flex: 1;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  padding: 10px;
+}
+.orderinfo{
+  width: 1190px;
+  margin: 20px auto;
+  background: #ffffff;
+}
+.el-input-group {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+}
+.el-input--large {
+  font-size: 16px;
+}
+.el-input {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+.order-title, .order-num{
+  display: inline-block;
+  background-color: #fbfdff;
+  color: #97a8be;
+  border: 1px solid #bfcbd9;
+  border-radius: 4px;
+  padding: 10px 8px;
+}
+.order-title{
+  /* border-right: 1px solid transparent;   */
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;  
+}
+.order-num{
+  flex: 9;
+  border-left: 1px solid transparent;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;  
+  background: #eef1f6;
+  cursor: not-allowed;
+}
+.houseinfo-span1{
+  font-size: 18px;
+  margin-left: 70px;
+}
+.orderinfo table{
+  width: 100%;
+}
+.orderinfo table,.orderinfo th,.orderinfo td{
+  border: 1px solid #dfe6ec;
+  border-collapse: collapse;
+  text-align: center;
+}
+.orderinfo thead tr{
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  background: #eef1f6;
+}
+.orderinfo td, .orderinfo th{
+  width: 30%;
+  height: 40px;
+  min-width: 0;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #1f2d3d;
+}
+.orderinfo td.third, .orderinfo th.third{
+  width: 40%;
+}
+.userinfo thead th, .userinfo tbody td{
+  width: 33.33%;
+}
+.commit{
+  overflow: hidden;
+  padding: 0 0 20px;
+}
+.commit button{
+  width: 181px;
+  height: 49px;
+  margin-right: 60px;
+  background: #f05b72;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  color: whitesmoke;
+  cursor: pointer;
+  float: right;
+  border: none;
+  border: none;
+}

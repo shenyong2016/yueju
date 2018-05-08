@@ -1,0 +1,379 @@
+/* left-sidebar开始 */
+#person{
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
+#person .wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sidebar-container {
+  background: #ffffff;
+  width: 280px;
+  height: 260px;
+  margin-bottom: 70px;
+  box-shadow: 2px 2px 2px #ccc;
+}
+#sidebar {
+  width: 100%;
+  height: 260px;
+  background: #fff;
+  margin-top: 26px;
+  font-size: 18px;
+  font-family: 微软雅黑;
+  box-shadow: 2px 2px 2px #ccc;
+  margin-top: 33px;
+}
+#sidebar li {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.img-pos {
+  position: absolute;
+  left: 62px;
+  top: 17px;
+}
+#sidebar li img{
+  width: 26px;
+  height: 26px;
+}
+#sidebar li span {
+  position: absolute;
+  left: 120px;
+  color: #606568;
+  cursor: pointer;
+  font-size: 18px;
+}
+#sidebar li:hover {
+  background: url(../img/active_message.jpg) center right no-repeat;
+}
+#sidebar li:hover span {
+  color: #78e5b5;
+}
+
+#sidebar li.active {
+  background: url(../img/active_message.jpg) center right no-repeat;
+}
+#sidebar li span.active {
+  color: #78e5b5;
+}
+/* left-sidebar结束 */
+
+/* right-content开始 */
+.right-content{
+  width: 870px;
+  /* height: 820px; */
+  /* background: #fff; */
+}
+.tab-bar {
+  width: 100%;
+  height: 40px;
+}
+.btn {
+  width: 100px;
+  height: 40px;
+  float: left;
+  line-height: 40px;
+  text-align: center;
+  background: #ffffff;
+  margin-right: 2px;
+  cursor: pointer;
+}
+.tab-bar .btn.selected {
+  box-shadow: none;
+  color: #2eb57b;
+  border-top: 2px solid #2eb57b;
+}
+.tab-bar .btn {
+  border-top: 2px solid #fff;
+}
+.unfilled-order-content {
+  width: 780px;
+  /* background: #fff; */
+  /* padding-top: 10px; */
+  padding-bottom: 10px;
+}
+.marginbottom {
+  margin-bottom: 12px;
+}
+.house-ad {
+  width: 810px;
+  height: 151px;
+  padding: 21px 30px 0 30px;
+  background: #ffffff;
+}
+.house-detail {
+  width: 100%;
+  height: 102px;
+}
+.img-container {
+  width: 174px;
+  height: 102px;
+  float: left;
+}
+.house-detail img {
+  width: 100%;
+  height: 100%;
+}
+.house-description {
+  border-bottom: 1px solid #dee2e4;
+  color: #39454b;
+  width: 610px;
+  height: 102px;
+  float: left;
+  margin-left: 24px;
+}
+.house-detail-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.house-address, .house-condition {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.in-out-time {
+  font-size: 14px;
+  color: #2eb57b;
+  margin-top: 15px;
+}
+.right-double-btn {
+  width: 267px;
+  height: 49px;
+  float: right;
+}
+.left-single-btn {
+  float: left;
+}
+.button {
+  /* width: 124px; */
+  height: 30px;
+  /* float: left; */
+  margin-top: 10px;
+  color: #5ce1a8;
+  border: 1px solid #e4f1ec;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+.button .order-btns {
+  display: block;
+  cursor: pointer;
+  border: 1px solid #58d7a0;
+  height: 28px;
+  color: #5ce1a8;
+  padding: 0 30px;
+  outline: none;
+}
+
+.right-single-btn {
+  float: right;
+  margin-right: 20px;
+}
+.button {
+  /* width: 124px; */
+  height: 30px;
+  float: left;
+  /* margin-top: 10px; */
+  color: #5ce1a8;
+  border: 1px solid #e4f1ec;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  margin: 10px 10px;
+}
+.button:hover{
+  background: #5ce1a8;
+}
+.button:hover a{
+  color: #fff;
+}
+.add-class{
+  float: right;
+}
+.tour-bar{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tour-bar span{
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: none;
+  color: #2eb57b;
+  border-top: 2px solid #2eb57b;
+}
+.tour-bar a{
+  display: inline-block;  
+  border: 0;
+  background: #fff;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 40px;
+}
+.tour-bar a:hover{
+  background: #10a07d;
+  color: #fff;
+}
+.my-blogs{
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  min-height: 300px;
+}
+.my-blogs li{
+  border-bottom: 1px dashed #666;
+  margin-top: 4px;
+  padding-bottom: 4px;
+}
+.show-content-main ul li h5, .show-content-main ul li span {
+  padding: 0 6px;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+.show-content-main ul li a {
+  display: inline-block;
+  padding: 0 6px;
+}
+.show-content-main ul li a:hover{
+  background: #10a07d;
+  border-radius: 5px;
+  color: #fff;
+}
+.blogs-editor {
+  float: right;
+  margin-right: 4px;
+}
+.blogs-editor a{
+  outline: none;
+}
+.show-content-main ul li p.blogs-date {
+  text-align: right;
+  padding-bottom: 4px;
+}
+.data_container {
+  width: 870px;
+  /* height: 820px; */
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 50px;  
+}
+.data_wrap {
+  width: 380px;
+  margin: 0px 180px;
+  position: relative;
+}
+.data_tit {
+  text-align: center;
+  color: #484e52;
+  font-size: 20px;
+  margin: 35px 0px 0px 0px;
+}
+.info_username {
+  margin-top: 0px;
+}
+input {
+  height: 43px;
+  border: 1px solid #c4c4c4;
+  font-size: 16px;
+  text-indent: 19px;
+}
+.info_tit {
+  color: #a2a2a2;
+  font-size: 16px;
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 17px;
+}
+.info_name, .info_username {
+  margin-top: 0px;
+}
+.input_l {
+  width: 378px;
+}
+input, textarea {
+  outline: none;
+}
+
+.sex_item {
+  width: 30px;
+  height: 12px;
+}
+.btn_submit {
+  height: 45px;
+  width: 380px;
+  font-size: 18px;
+  color: #ffffff;
+  background: #5be0a7;
+  border: 1px solid #e4f1ec;
+  border-radius: 4px;
+  letter-spacing: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.photo {
+  position: absolute;
+  top: 50px;
+  right: -150px;
+}
+.head-img{
+  width: 99px;
+  height: 98px;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 11px;
+}
+.head-img img{
+  width: 100%;
+  height: 100%;
+}
+.upload-head{
+  position: absolute;
+  width: 104px;
+  height: 38px;
+}
+.head-title, .head-file{
+  width: 102px;
+  height: 36px;
+  border: 1px solid #5be0a7;
+  color: #5be0a7;
+  text-align: center;
+  line-height: 36px;
+  position: absolute;
+  cursor: pointer;
+}
+.head-file{
+  /* opacity: 0; */
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* right-content结束 */
+

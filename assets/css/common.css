@@ -1,0 +1,78 @@
+/* 样式重置开始 */
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 14px; 
+  color: #333;
+}
+ul, ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+body{
+  background: #eff3f5;
+}
+input{
+  outline: none;
+}
+.wrapper{
+  width: 1190px;
+  margin: 0 auto;
+}
+/* 样式重置结束 */
+/* header开始 */
+#header{
+  height: 48px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+#header .wrapper{
+  height: 48px;
+}
+#header .logo{
+  float: left;
+}
+#header .nav-tab{
+  float: right;
+}
+#header .header-desc{
+  float: right;
+}
+.nav-tab{
+  height: 48px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-tab li{
+  height: 100%;
+  line-height: 48px;
+  margin-right: 10px;
+}
+.nav-tab li a{
+  padding: 5px 20px;
+}
+.nav-tab li.nav-tab-item a{
+  cursor: pointer;
+  line-height: 47px;
+  border: 1px solid #10a07d;
+  border-radius: 20px;
+}
+.nav-tab li.nav-tab-item a.tab-active{
+  background: #10a07d;
+  color: #fff;
+}
+.login-active{
+  border-bottom: 2px solid #10a07d;
+  color: #428bca;
+}
+.nav-tab .login-register a{
+  padding: 5px 5px;
+}
+/* header结束 */

@@ -1,0 +1,56 @@
+
+/* house-group */
+.house-group{
+  width: 370px;
+  height: 285px;
+  border: 1px solid #39c6a7;
+  margin: 0 12px;
+  margin-bottom: 15px;
+}
+.pic-box{
+  width: 370px;
+  height: 225px;
+  overflow: hidden;
+  position: relative;
+}
+.house-mask{
+  width: 100%;
+  height: 225px;
+  background: #000;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pic-box img{
+  width: 100%;
+  height: 100%;
+}
+.house-desc p{
+  width: 370px;
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+.house-desc p:nth-child(2){
+  font-size: 12px;
+  padding-left: 8px;
+  color: #525d5d;
+}
+.house-desc span{
+  font-size: 16px;
+  height: 30px;
+  margin-left: 8px;
+  line-height: 30px;
+  color: #525d5d;
+}
+.house-desc span:nth-child(2){
+  color: #f00;
+}
+.tour-info{
+  width: 362px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* house-price */

@@ -1,0 +1,276 @@
+#house-detail{
+  margin-top: 30px;
+}
+.house-container{
+  width: 100%;
+  position: relative;
+}
+/* 房屋图片 */
+.house-imgs img{
+  width: 100%;
+  height: 402px;
+  display: none;
+}
+.house-imgs img.selected{
+  display: block;
+}
+.house-tab{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+.house-tab li{
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  float: left;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.house-tab li.selected{
+  background: #10a07d;
+}
+.left-btn, .right-btn{
+  width: 64px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 0);
+  display:none;
+  cursor: pointer;
+}
+.left-btn{
+  left: 55px;
+  background-image: url(../img/left.png);
+}
+.right-btn{
+  right: 5px;
+  background-image: url(../img/right.png);
+}
+/* 房屋详情 */
+.house-info{
+  margin-top: 25px;
+  height: 1000px;
+}
+.left-info{
+  width: 640px;
+  float: left;
+  padding: 0 65px;
+}
+.right-info{
+  width: 370px;
+  /* height: 300px; */
+  /* background: #fff; */
+  float: right;
+}
+
+.house-search{
+  padding: 10px 5px;
+  border-bottom: 1px dashed #ccc;
+  background: #fff;
+  /* margin: 0 10px; */
+}
+.house-address{
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(../img/address.png);
+}
+.title{
+  font-size: 16px;
+  color: #999;
+}
+.price{
+  color: #FF0000;
+  float: right;
+}
+.date-change-box{
+  padding: 12px 10px;
+  height: 43px;
+  background: #fff;
+}
+.change-control-group {
+  font-size: 16px;
+  line-height: 40px;
+  color: #868795;
+  float: left;
+}
+.change-control-group span{
+  float: left;
+  margin: 0 12px 0 0;
+  font-size: 16px;
+  line-height: 40px;
+  color: #868795;
+}
+.change-control-group .demo-time{
+  float: left;
+  width: 154px;
+}
+.demo-time input{
+  width: 140px;
+  line-height: 34px;
+  text-indent: 10px;
+  color: #999;
+  vertical-align: top;
+}
+.change-control-group .filter-btn {
+  cursor: pointer;
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid #1fa789;
+  background: #fff;
+  border-radius: 4px;
+  color: #39c6a7;
+  font-weight: bold;
+  float: left;
+}
+/* 房屋信息 */
+.house-other-info{
+  margin-top: 25px;
+  padding: 22px 65px 30px;
+  background: #fff;
+}
+/* .house-other-content{
+  padding: 22px 65px 30px;
+  
+} */
+.other-nav{
+  overflow: hidden;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dbc9c9;
+}
+.other-nav span{
+  cursor: pointer;
+  display: inline-block;
+  width: 112px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  margin-right: 50px;
+}
+.current-border{
+  color: #1fa789;
+  border: 1px solid #1fa789;
+  border-radius: 16px;
+}
+
+
+.list-info, .note-in-info, .comment-info{
+  display: none;
+  background: #fff;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.list-info{
+  display: block;
+  font-size: 14px;
+  color: #666;
+  line-height: 26px;
+}
+.list-info li{
+  margin-top: 14px;
+  overflow: hidden;
+}
+.list-info li span.list-title {
+  float: left;
+  color: #888;
+  float: left;
+}
+.detail-info{
+  width: 500px;
+  font-size: 14px;
+  color: #333;
+  line-height: 22px;
+  margin-left: 50px;
+  float: left;
+}
+.start-title{
+  vertical-align: baseline;
+  margin: 10px;
+}
+.score-text{
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.score-total{
+  margin-right: 4px;
+  font: bold 24px/1.4 Georgia;
+  color: #2eb57b;
+}
+.text-box{
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 14px;
+  position: relative;
+}
+.text-box b{
+  font-family: Tahoma;
+  font-weight: bold;
+  color: #2eb57b;
+}
+.right-info h3{
+  /* margin-top: 20px; */
+  font-size: 18px;
+  text-align: center;
+  line-height: 22px;
+}
+.recommend-house li{
+  background: #fff;
+  margin-top: 20px;  
+}
+.recommend-house li img{
+  width: 370px;
+  height: 225px;
+}
+.recommend-house p{
+  padding: 6px 20px
+}
+.recommend-house span{
+  color: #f00;
+  float: right;
+}
+
+/* 百度地图 */
+#map-container{
+  width: 640px;
+  height: 300px;
+  /* background: #fff; */
+  margin: 20px auto;
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

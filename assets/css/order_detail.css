@@ -1,0 +1,151 @@
+#order-info {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px
+}
+#order-info .wrapper{
+  background: #fff;
+  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
+}
+.order-name{
+  padding: 0 30px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.order-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.order-left{
+  width: 45%;
+  /* background: #f00; */
+}
+.order-right{
+  width: 50%;
+}
+.order-list{
+  padding: 5px 0;
+}
+.order-list span{
+  font-size: 16px;
+  display: inline-block;
+}
+.order-list-title{
+  width: 100px;
+}
+.order-list-con{
+  margin-left: 20px;
+}
+.order-list-house{
+  margin-left: 124px;
+  margin-top: -22px;
+}
+/* house-group */
+.house-group{
+  width: 100%;
+  /* height: 300px; */
+  /* border: 1px solid #525d5d; */
+}
+.pic-box{
+  width: 100%;;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pic-box img{
+  width: 100%;
+  height: 100%;
+}
+.house-desc p{
+  width: 370px;
+  height: 35px;
+  line-height: 35px;
+}
+.house-desc a:hover p span{
+  color: #10a07d;
+}
+.house-desc p:nth-child(2){
+  font-size: 12px;
+  padding-left: 8px;
+  color: #525d5d;
+}
+.house-desc span{
+  font-size: 16px;
+  height: 30px;
+  margin-left: 8px;
+  line-height: 30px;
+  color: #525d5d;
+}
+.house-desc span:nth-child(2){
+  color: #f00;
+}
+.tour-info{
+  width: 362px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* house-price */
+
+
+/* 订单状态 */
+.order-status{
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.order-status i{
+  width: 32px;
+  height: 32px;
+  font-size: 30px;
+  color: #10a07d;
+}
+.order-status i::before{
+  margin-top: 3px;
+}
+.order-status span{
+  display: block;
+  font-size: 20px;
+  margin-left: 10px; 
+  margin-bottom: 2px; 
+}
+.comment-list{
+  height: 30px;
+  padding: 20px 0;
+}
+.comment-list-title{
+  margin-left: 20px;
+}
+.el-rate{
+  display: inline-block;
+}
+.order-status .no-comment{
+  color: #999;
+}
+.go-comment{
+  margin-left: 624px;
+}
+.go-comment:hover{
+  color: #10a07d;
+}
+.submit-comment{
+  width: 181px;
+  height: 49px;
+  background: #f05b72;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  color: whitesmoke;
+  cursor: pointer;
+  float: right;
+  border: none;
+  /* margin: 0 auto; */
+}

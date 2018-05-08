@@ -1,0 +1,74 @@
+.banner img {
+  width: 100%;
+  height: 200px;
+}
+.about-box {
+  width: 1190px;
+  margin: 0 auto;
+}
+.bread-box {
+  color: #666;
+  line-height: 42px;
+}
+.bread-box a,.bread-box span{
+  font-size: 14px;
+}
+.bread-box a:hover{
+  color: #428bca;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sidebar-box {
+  width: 200px;
+  background: #ffffff;
+}
+.sidebar-box ul {
+  margin-bottom: 0px;
+}
+.sidebar-box li {
+  line-height: 38px;
+  border-bottom: 1px solid #edf0f4;
+}
+.sidebar-box li{
+  background: #39c6a7;
+  color: #fff;
+  cursor: default;
+  text-decoration: none;
+  text-align: center;
+}
+.sidebar-box li a {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  cursor: default;  
+}
+.main-content {
+  width: 860px;
+  background: #fff;
+  overflow: hidden;
+  float: right;
+  padding: 30px 50px;
+  min-height: 300px;
+  margin-bottom: 20px;
+}
+.content-txt {
+  margin-bottom: 20px;
+  text-align: center;
+  font: inherit;
+  font-size: 30px;
+  color: #333;
+}
+.main-content p {
+  text-indent: 2em;
+  font-size: 14px;
+  padding-bottom: 15px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 0px;
+}
+p {
+  margin: 0 0 10px;
+}

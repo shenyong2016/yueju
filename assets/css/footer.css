@@ -1,0 +1,96 @@
+footer{
+  background: #152636;
+  padding: 30px 0;
+  color: #fff;
+  clear: both;
+}
+div.footerBox{
+  width: 1040px;
+  margin: 0 auto;
+  overflow: auto;
+}
+div.footerLeft{
+  float:left;
+  overflow: hidden;
+}
+.footerLogo{
+  float: left;
+  display: block;
+  margin-right: 70px;
+}
+.footerLogo img{
+  width:178px;
+}
+.footerNav{
+  float: left;
+  border-left: 1px solid #fff;
+}
+.footerNav li{
+  margin: 8px 0 0 20px;
+}
+.footerNav li a{
+  cursor:pointer;
+  color: #fff;
+  font-size: 16px;
+}
+.footerNav li a:hover{
+  text-decoration: underline;
+}
+li.firstPage{
+  margin-top: 0;
+}
+.footerRight{
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.footerRight p{
+  float: left;
+  line-height: 110px;
+  font-size:16px;
+  margin-right: 70px;
+}
+.footerRight{
+  float: right;
+}
+.secondCode{
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin:0 auto 20px;
+}
+
+.form-input{
+  height: 24px;
+}
+
+.friendly-link{
+  float: left;
+  margin-left:100px;
+  padding-left: 20px;
+  border-left: 1px solid #fff;
+}
+.friendly-link h2{
+  line-height: 22px;
+  font-size: 16px;
+  margin-top:0px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.friendly-link li{
+  margin-bottom: 8px;
+}
+.friendly-link li a{
+  cursor: pointer;
+  color:#fff;
+  font-size: 14px;
+}
+.friendly-link li a:hover{
+  text-decoration: underline;
+}
+.friendly-link2{
+  margin-left:10px;
+  padding-left: 20px;
+  border-left: none;
+  margin-top:30px;
+}

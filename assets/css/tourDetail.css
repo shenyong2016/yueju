@@ -1,0 +1,154 @@
+section{
+  background: #eff3f5;
+  padding: 15px 0;
+  display: block;
+}
+#tour-content{
+  position: relative;
+  height: 538px;
+  box-shadow: 0 3px 3px #ccc;
+}
+#tour-content .tour-img{
+  width: 100%;
+  height: 468px;
+}
+#tour-content h2{
+  position: absolute;
+  left: 130px;
+  bottom: 80px;
+  color: #10a07d;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 30px;
+}
+#tour-content{
+  /* height: 70px; */
+  line-height: 70px;
+  font-size: 15px;
+  color: #666;
+  position: relative;
+}
+.blog-info {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 15px;
+  color: #666;
+  position: absolute;
+  bottom: -10px;
+}
+.blog-info img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  left: 18px;
+}
+.info-left {
+  position: absolute;
+  left: 130px;
+}
+.author a{
+  color: #69c;
+  border: 0;
+}
+.blog-info span {
+  padding: 0 16px;
+  cursor: pointer;
+  border-left: 1px solid #aaa;
+}
+.blog-info span {
+  padding: 0 16px;
+  cursor: pointer;
+  border-left: 1px solid #aaa;
+}
+.author a:hover{
+  color: #2a6496;
+  text-decoration: underline;
+}
+.clearfix{
+  content: '';
+  display: block;
+  clear: both;
+}
+#blog-body {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#blog-wrap {
+  float: left;
+  width: 850px;
+  box-sizing: border-box;
+}
+#blog-tag {
+  margin: 10px 0;
+}
+.blog-content {
+  padding: 20px 30px 40px;
+  border-bottom: 1px solid #10a07d;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.blog-content p{
+  margin: 0 0 10px;
+}
+#blog-side-bar {
+  float: right;
+  width: 290px;
+}
+#blog-side-bar h3 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+#blog-side-bar li {
+  margin-bottom: 10px;
+  position: relative;
+}
+#blog-side-bar li div {
+  overflow: hidden;
+}
+#blog-side-bar li img {
+  display: block;
+  width: 290px;
+  height: 165px;
+  transition: all .3s ease;
+}
+#blog-side-bar li p {
+  height: 22px;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#blog-side-bar li .bind {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+#blog-side-bar li div span {
+  position: absolute;
+  left: -30px;
+  top: 2px;
+  width: 113px;
+  height: 35px;
+  background: #10a07d;
+  transform: rotate(-45deg);
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  text-indent: -10px;
+}
+.el-tag{
+  margin: 0 5px;
+}

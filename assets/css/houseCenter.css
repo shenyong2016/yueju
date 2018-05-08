@@ -1,0 +1,250 @@
+.body{
+  background:#eff3f5;
+}
+/*引入字体*/
+@font-face {
+  font-family: FZLTXHKGBK10; /*这里是说明调用来的字体名字*/
+  src: url('../font/FZLTXHKGBK10.ttf');
+  /*这里是字体文件路径*/
+}
+
+/*占位符样式修改*/
+input::-webkit-input-placeholder{
+  color:#bebdbb ;
+  font-size: 16px;
+}
+input:-moz-placeholder{
+  color:#bebdbb ;
+  font-size: 16px;
+}
+input:-ms-input-placeholder{
+  color:#bebdbb ;
+  font-size: 16px;
+}
+
+/*主内容包裹层*/
+#house-center .wrapper{
+  display: block;
+  margin: 20px auto 0;
+}
+/*搜索框包裹层*/
+.search{
+  border-radius: 4px;
+  width:858px;
+  height: 50px;
+  /*background: green;*/
+  margin: 0 auto 19px;
+  border: 1px solid #e0e0e0;
+}
+
+select {
+  /*将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none;
+}
+.price-txt{
+  width: 100px;
+  height:22px;
+  margin-right: 5px;
+}
+
+/*搜索想查询城市*/
+.search_city{
+  font-size: 16px;
+  color:#bebdbb;
+  text-indent:15px;
+  border-radius: 4px 0 0 4px ;
+  border-style:none;
+  width: 102px;
+  height: 50px;
+  background-image: url("../img/houseCenter/dis2.png");
+  float: left;
+  border-right: 1px solid #e0e0e0;
+}
+
+/*搜索区*/
+.search_district{
+  font-size: 16px;
+  color:#bebdbb;
+  text-indent:15px;
+  border-style:none;
+  width: 102px;
+  height: 50px;
+  /*background: #0000FF;*/
+  background-image: url(../img/houseCenter/dis.png);
+  float: left;
+  border-right: 1px solid #e0e0e0;
+}
+
+.staytime{
+  font-size: 16px;
+  border-style:none;
+  box-sizing: border-box;
+  color:#bebdbb;
+  -moz-appearance: none;
+  display:block;
+  outline:0;
+  text-decoration:none;
+  width: 110px;
+  height: 50px;
+  float: left;
+  border-right: 1px solid #e0e0e0;
+  text-indent:10px;
+}
+/*搜索内容*/
+.search_content{
+  font-size: 16px;
+  border-style:none;
+  box-sizing: border-box;
+  color:#bebdbb;
+  -moz-appearance: none;
+  display:block;
+  outline:0;
+  text-decoration:none;
+  text-indent:30px;
+  width: 378px;
+  height: 50px;
+  float: left;
+}
+/*搜索按钮*/
+.search_btn{
+  width: 158px;
+  height: 50px;
+  float: left;
+  cursor:pointer;
+  background: #39c6a7 no-repeat 111px 17px;
+  border: 0;
+  border-radius: 0 2px 2px 0 ;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+}
+/***搜索按钮***/
+.select-box{
+  position: relative;
+}
+.select_btn{
+  width: 101px;
+  height: 50px;
+  display: block;
+  font-size: 16px;
+  color: rgb(162, 162, 162);
+  line-height: 50px;
+  float: left;
+  background:#fff url(../img/down.png) no-repeat 70px 9px;
+  border-right: 1px solid #e0e0e0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px 0 0 2px ;
+}
+.search_list{
+  position: absolute;
+  top:50px;
+  left:-1px;
+  border:1px solid #e0e0e0;
+  display: none;
+}
+.search_list li{
+  width: 101px;
+  height: 35px;
+  line-height: 35px;
+  background: white;
+  cursor: pointer;
+  color: rgb(162, 162, 162);
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+.search_list li:hover{
+  background:#39c6a7;
+  color:#fff;
+}
+/* 搜索条件 */
+
+.select-tab{
+  /* margin-left: 20px; */
+  border-radius: 4px;
+  padding-top: 30px;
+  padding-left: 30px;
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+.tab-list{
+  margin-bottom: 14px;
+  /* display: block; */
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.tab-title{
+  float: left;
+  display: block;
+  width: 75px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.tab-content input{
+  width: 100px;
+  height: 22px;
+  margin-right: 5px;
+  outline: none;
+}
+.tab-district{
+  color: #443d46;
+  float: left;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  margin: 0 10px;
+}
+.tab-content input[type="checkbox"]{
+  margin: 4px 0 0;
+  line-height: normal;
+}
+.tab-content label{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+#search-content{
+  margin-top: 50px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

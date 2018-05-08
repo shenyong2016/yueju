@@ -1,0 +1,198 @@
+/* slide-box开始 */
+#slide-box{
+  width: 100%;
+  height: 334px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-imgs{
+  width: 100%;
+  height: 100%;
+}
+.slide-imgs img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide-tab{
+  width: 148px;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.slide-tab li{
+  margin-bottom: 2px;
+}
+.slide-tab li img{
+  display: block;
+  width: 146px;
+  height: 60px;
+  border: 1px solid transparent;
+}
+.slide-tab li img.slide-tab-active{
+  border: 1px solid #ffc56c;
+}
+/* slide-box结束 */
+
+/* serach-box开始 */
+#serach-box{
+  width: 100%;
+  height: 154px;
+}
+#serach-box .wrapper{
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+#serach-box .wrapper form{
+  margin-top: 50px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.search-date,.search-content,.search-btn{
+  margin: 0 5px;
+}
+.search-date,.search-content{
+  width: 219px;
+  height: 35px;
+  border:1px solid #2fc29c;
+  border-radius: 4px;
+  background: #ffffff;
+  line-height: 35px;
+  position: relative;
+}
+.search-date .search-text,.search-content .search-text{
+  font-size:15px;
+  color:#919090;
+  position: absolute;
+  left:12px;
+}
+.search-date input{
+  border:none;
+  outline: none;
+  width: 219px;
+  height: 35px;
+  font-size: 15px;
+  line-height: 35px;
+  text-indent: 12px;
+  border-radius: 4px;
+}
+.search-content input{
+  border:none;
+  outline: none;
+  width: 219px;
+  height: 35px;
+  font-size: 15px;
+  line-height: 35px;
+  text-indent: 20px;
+  border-radius: 4px;
+}
+.search-date .search-icon,.search-content .search-icon{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background:url("../img/date-icon.png") 0 0 no-repeat;
+  right:13px;
+  top:8px;
+}
+.search-content .search-icon{
+  background:url("../img/search-icon.png") 0 0 no-repeat;
+}
+.search-btn {
+  width: 124px;
+  height:37px;
+  background: #2fc29c;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  line-height: 37px;
+  color:#fff;
+  font-size: 16px;
+  outline: none;
+}
+.search-phone{
+  margin-top: 20px;
+}
+/*  */
+
+/* search-box结束 */
+
+/* house-box开始 */
+#house-box{
+  /* height: 900px; */
+}
+
+.house-title p{
+  font-size: 30px;
+  text-align: center;
+}
+.house-title p:nth-child(2){
+  margin-top: 10px;
+}
+.house-select-tab{
+  width: 1190px;
+  margin: 25px auto;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.house-select-tab li{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 22px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.house-select-tab li.current{
+  color: #39c6a7;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #39c6a7;
+}
+.house-content, .travel-content{
+  width: 1190px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+.more-btn{
+  color: #525d5d;
+  display: block;
+  width: 103px;
+  height: 28px;
+  border: 1px solid #dddddd;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 40px auto;
+}
+/* house-box结束 */
+
+/* travelogs开始 */
+#travelogs {
+  width: 1190px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+#travelogs h2 {
+  margin-bottom: 20px;
+  color: #525d5d;
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* travelogs结束 */

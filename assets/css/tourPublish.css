@@ -1,0 +1,85 @@
+#edit-tour .baner{
+  width: 100%;
+  text-align: center;
+  margin: 15px auto;
+  background: #eee;
+  padding-bottom: 20px;
+}
+.demo {
+  margin: 20px auto;
+  /* overflow: hidden; */
+  width: 960px;
+}
+.upload-btn{
+  height: 40px;
+  position: relative;
+}
+.upload-btn h2{
+  width: 200px;
+  height: 40px;
+  color: skyblue;
+  background: #eee;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+}
+.upload-btn input{
+  width: 200px;
+  height: 40px;
+  opacity: 0;
+  color: transparent;
+  display: none;
+}
+.upload-btn input,.upload-btn h2{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;  
+}
+
+.upload-img{
+  width: 604px;
+  height: 231px;
+  margin: 10px auto;
+}
+.upload-img img{
+  width:100%;
+  height:100%;
+  /* max-width:100%; */
+}
+
+.delete-img span{
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: inline-block;
+  background: url(../img/delete-img.png);
+}
+.blog_content{
+  margin: 30px 0;
+}
+/* .blog_content textarea{
+  height: 400px;
+} */
+.edit_header span, .blog_content span{
+  display: block;  
+  color: #525d5d;
+  margin: 20px 0;
+}
+.tag, .publish{
+  margin: 20px 0;
+}
+.publish button{
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #f60;
+  padding: 0 0;
+}
+.publish span{
+  color: #fff;
+}
