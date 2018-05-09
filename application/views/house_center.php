@@ -268,11 +268,13 @@
           }
         },
         created(){
-          // var url = "http://localhost/yueju/house/search_index?minPrice=&maxPrice=&content=";
-          // var params = window.location.href.split('?')[1].split('&');
-          // this.minPrice = params[0].split('=')[1];
-          // this.maxPrice = params[1].split('=')[1];
-          // this.content = params[2].split('=')[1];
+          var url = window.location.href;
+          var newUrl = url.indexOf('search') == -1 ? 
+              (url + '?minPrice=&maxPrice=&content=') : url;
+          var params = newUrl.split('?')[1].split('&');
+          this.minPrice = params[0].split('=')[1];
+          this.maxPrice = params[1].split('=')[1];
+          this.content = params[2].split('=')[1];
           this.loadHouseData(this.page);
         },
         mounted(){
