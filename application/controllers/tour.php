@@ -4,6 +4,7 @@ class Tour extends CI_Controller {
     parent::__construct();
     $this -> load -> model('house_model');
     $this -> load -> model('tour_model');
+    $this -> load -> model('user_model');
   }
   public function index(){
     //分页
@@ -134,6 +135,32 @@ class Tour extends CI_Controller {
     }else{
       echo 'fail';
     }
+  }
+
+  // 获取某人的游记列表
+  public function get_someone_tour_list(){
+    $user_id = $this -> input -> get('userId');
+    $page = $this -> input -> get('page');
+    $page_size = $this -> input -> get('pageSize');
+    
+    $tour = $this -> tour_model -> get_tour_list_by_user_id($user_id,($page-1)*$page_size,$page_size);
+    $tour_count = $this -> tour_model -> get_tour_list_count_by_user_id($user_id);
+    echo json_encode(array(
+      "tour" => $tour,
+      "tour_count" => $tour_count
+    ));
+  }
+
+  public function get_other_info(){
+    $user_id = $this -> input -> get('userId');
+    $user_info = $this -> user_model -> get_user_by_user_id($user_id);
+    $house_info = $this -> house_model -> get_recommened_house();
+    $tour_info = $this -> tour_model -> get_hot_tour();
+    echo json_encode(array(
+      'user_info' => $user_info,
+      'house_info' => $house_info,
+      'tour_info' => $tour_info
+    ));
   }
 
   

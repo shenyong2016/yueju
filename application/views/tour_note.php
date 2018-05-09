@@ -40,13 +40,13 @@
                   <div class="blog-article-info">
                     <div class="blog-article-info-up">
                       <div class="author-pic">
-                        <a data-user="<?php echo $loginedUser ? $loginedUser->username : ''; ?>" href="javascript:;">
+                        <a data-user="<?php echo $loginedUser ? $loginedUser->username : ''; ?>" href="welcome/selfpage/<?php echo $tour->user_id;?>">
                           <img src="<?php echo $tour->head_img ? $tour->head_img : 'assets/img/head-default.png';?>" alt="">                            
                         </a>
                       </div>
                       <div class="blog-article-info-title">
                         <h4><a href="tour/detail/<?php echo $tour->tour_id;?>"><?php echo $tour->tour_title;?></a></h4>
-                        <p><a class="author-name" data-user="<?php echo $loginedUser ? $loginedUser->username : ''; ?>" href="javascript:;"><?php echo $tour->username;?></a></p>
+                        <p><a class="author-name" data-user="<?php echo $loginedUser ? $loginedUser->username : ''; ?>" href="welcome/selfpage/<?php echo $tour->user_id;?>"><?php echo $tour->username;?></a></p>
                       </div>
                     </div>
                     <div class="blog-article-info-content"><?php echo $tour->tour_content;?> 
@@ -88,7 +88,7 @@
                   foreach($house_list as $house){
                 ?>
                 <a href="house/detail/<?php echo $house->house_id;?>">
-                  <div style="background-image: url(<?php echo $house->img_src;?>)" class="fine-community-show">悦居公寓</div>
+                  <div style="background-image: url(<?php echo $house->img_src;?>)" class="fine-community-show"><?php echo $house->house_name;?></div>
                 </a>
                 <?php
                   }
@@ -132,17 +132,6 @@
       window.location.href = 'tour/tour_publish';
     });
     
-    $('.author-pic a, .author-name').on('click', function(){
-      var user = $(this).data('user');
-      if(!user){
-        alert('用户未登录，请先登录');
-        $('#dialog').show(600);
-        return;
-      }
-      window.location.href = "welcome/user";
-    });
-
-
   </script>
 </body>
 </html>

@@ -19,7 +19,7 @@ class House_model extends CI_Model {
 
   public function get_recommened_house(){
     $sql = 'select h.*, i.img_src from t_house_info h, t_house_img i 
-            where h.house_id = i.house_id and i.is_main = 1 and h.house_recommened =1';
+            where h.house_id = i.house_id and i.is_main = 1 and h.house_recommened =1 limit 3';
     return $this -> db -> query($sql) -> result();
   }
 

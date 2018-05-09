@@ -1,0 +1,286 @@
+.authorinfo{
+  /* width: 95%; */
+  margin: 0 auto;
+  height: 265px;
+  margin-top: 30px;
+  -webkit-box-shadow: 0 3px 5px rgba(6,0,1,.1);
+  -moz-box-shadow: 0 3px 5px rgba(6,0,1,.1);
+  box-shadow: 0 3px 5px rgba(6,0,1,.1);
+  border: solid 1px #ddd;
+  margin-bottom: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.authorinfo-bg{
+  background: url(../img/selfpagebg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center 20%;
+  flex: 4;
+}
+.authorinfo-content {
+  flex: 2;
+}
+.authorinfo .authorinfo-content .authorinfo-pic {
+  position: absolute;
+  top: 135px;
+  left: 60px;
+}
+.authorinfo .authorinfo-content .authorinfo-pic img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.authorinfo .authorinfo-content .authorinfo-name {
+  position: absolute;
+  top: 135px;
+  left: 150px;
+}
+.authorinfo .authorinfo-content .authorinfo-name h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.authorinfo .authorinfo-content .authorinfo-name a {
+  position: absolute;
+  bottom: -25px;
+  left: 850px;
+}
+.btn-lg, .btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.blog-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+/* blog-list */
+.blog-list{
+  flex: 6;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+.blog-list h4{
+  /* width: 300px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 6px;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 400;
+}
+.blog-list li {
+  width: 100%;
+}
+.blog-list .blog-article{
+  display: flex;
+  margin-top: 31px;
+  height: 232px;
+  border: 1px solid #ccc;
+  margin-bottom: 39px;
+  background: #fff;
+}
+.blog-list .blog-article:hover{
+  box-shadow:5px 5px 10px rgba(200,200,200,.6);
+}
+.blog-list .blog-article .article-pic{
+  width: 419px;
+  overflow: hidden;
+}
+.blog-list .blog-article .article-pic img{
+  width: 100%;
+  height: 100%;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+.blog-list .blog-article .article-pic img:hover {
+  transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+
+}
+.blog-article h4{
+  width: 300px;
+}
+.blog-list .blog-article .blog-article-info{
+  flex:2;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.blog-list .blog-article .blog-article-info .blog-article-info-up{
+  display: flex;
+}
+.blog-list .blog-article .blog-article-info .author-pic{
+  flex:1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px;
+}
+.blog-list .blog-article .blog-article-info .author-pic img{
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.blog-list .blog-article .blog-article-info .blog-article-info-title{
+  flex:8;
+  margin-left: 4px;
+}
+.blog-article-info-title a{
+  font-size: 18px;
+}
+.blog-article-info-title h4 a:hover{
+  color: #428bca;
+}
+.blog-article-info-title .author-name{
+  font-size: 12px;
+  margin-top: 5px;
+}
+.blog-article-info-content{
+  font-size: 12px;
+}
+.blog-list .blog-article .blog-article-info .blog-article-info-content{
+  padding: 0 14px;
+}
+.blog-list .blog-article .blog-article-info .blog-article-info-tags{
+  padding: 14px;
+}
+.blog-list .blog-article .blog-article-info .blog-article-info-tags span{
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-radius: 10px;
+  padding:1px 4px;
+  margin-right: 6px;
+}
+
+.banner-content{
+  flex: 3;
+}
+.fine-community h4,.scenery-spot h4,.delicacy h4,.fine-article h4{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 9px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.fine-community >div{
+  width: 100%;
+  padding-top: 50%;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size:16px;
+  font-weight:bold;
+  text-align: center;
+}
+.scenery-spot span{
+  border:1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  /*margin: 20px 6px 0 0;*/
+  padding: 0 10px;
+  height: 28px;
+  line-height: 28px;
+  background: #fff;
+}
+.delicacy span{
+  border:1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  /*margin: 20px 6px 0 0;*/
+  padding: 0 10px;
+  height: 28px;
+  line-height: 28px;
+  background: #fff;
+}
+.fine-article{
+  padding-bottom: 10px;
+}
+.fine-article li{
+  list-style: inside square;
+  border-bottom: 1px dashed #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ccc;
+}
+.fine-article li a{
+  color: #333;
+}
+.banner-content .fine-community-show{
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: 20%;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  line-height: 350px;
+  font-weight: 200;
+}
+h4 a{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blog-article-info-content{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  max-width: 400px;
+  height: 51px;
+  /* font-size: 26px; */
+  line-height: 1.4;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

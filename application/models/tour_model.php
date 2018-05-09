@@ -79,5 +79,18 @@ class Tour_model extends CI_Model{
     return $this -> db -> affected_rows();
   }
 
+  public function get_tour_list_by_user_id($user_id, $offset, $limit){
+    $sql = "select t.*, u.username, u.username, u.head_img from t_tour t, t_user u 
+            where t.user_id = u.user_id and u.user_id = $user_id
+            limit $offset, $limit";
+    return $this -> db -> query($sql) -> result();
+  }
+
+  public function get_tour_list_count_by_user_id($user_id){
+    $sql = "select t.*, u.username, u.username, u.head_img from t_tour t, t_user u 
+            where t.user_id = u.user_id and u.user_id = $user_id";
+    return $this -> db -> query($sql) -> num_rows();
+  }
+
 
 }

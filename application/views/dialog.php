@@ -205,7 +205,7 @@
 
     // 关闭弹出层
     $('.dialog-close').on('click', function(){
-      $('#dialog').hide(600);
+      $('#dialog').hide(400);
     });
 
     // 打开弹出层

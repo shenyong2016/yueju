@@ -49,6 +49,10 @@
   <!-- footer -->
   <?php include 'footer.php';?>
   <!-- footer -->
+
+  <!-- dialog -->
+  <?php include 'dialog.php';?>
+  <!-- dialog -->  
   <input type="hidden" id="current-index" value="about">    
   <script src="assets/js/jquery-1.12.4.min.js"></script>  
   <script src="assets/js/header.js"></script>

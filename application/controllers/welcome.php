@@ -126,5 +126,9 @@ class Welcome extends CI_Controller {
     ));
   }
 
+  // 个人主页
+  public function selfpage(){
+    $this -> load -> view('self_page');
+  }
 
 }
