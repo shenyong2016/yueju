@@ -26,10 +26,30 @@ class House extends CI_Controller {
     $house_info = $this -> house_model -> get_house_by_house_id($house_id);
     $house_imgs = $this -> house_model -> get_house_imgs_by_house_id($house_id);
     $house_recommended = $this -> house_model -> get_recommened_house();
+    $evaluation = $this -> order_model -> get_order_evaluation_by_house_id($house_id);
+    $evaluation_count = $this -> order_model -> get_order_evaluation_count_by_house_id($house_id);
+    $evaluation_count = $evaluation_count == 0 ? 1 : $evaluation_count;
+    $clean = 0; $traffic = 0; $manage = 0; $facility = 0; $total_score = 0;
+    // 计算评价分数
+    foreach($evaluation as $item){
+      $clean += $item -> clean_val;
+      $traffic += $item -> traffic_val;
+      $manage += $item -> manage_val;
+      $facility += $item -> facility_val;
+    }
+    $total_score = $clean + $traffic + $manage + $facility;
+    $evaluation_score = array(
+      'clean_val' => ceil($clean / $evaluation_count),
+      'traffic_val' => ceil($traffic / $evaluation_count),
+      'manage_val' => ceil($manage / $evaluation_count),
+      'facility_val' => ceil($facility / $evaluation_count),
+      'total_val' => ceil($total_score / ($evaluation_count * 4))      
+    );
     $this -> load -> view('house_detail', array(
       'house_info' => $house_info,
       'house_imgs' => $house_imgs,
       'house_recommended' => $house_recommended,
+      'evaluation_score' => $evaluation_score
     ));
   }
 

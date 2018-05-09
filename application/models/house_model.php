@@ -86,8 +86,7 @@ class House_model extends CI_Model {
     return $this -> db -> query($sql) -> num_rows();
   }
 
-
-
+  
 
 
 

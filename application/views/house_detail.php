@@ -101,13 +101,13 @@
             <div class="comment-info list-info">
               <div class="start-title">
                 <span class="score-text">综合评价</span>
-                <span class="score-total">5</span>分
+                <span class="score-total"><?php echo $evaluation_score['total_val'] == 0 ? 5 : $evaluation_score['total_val'];?></span>分
               </div>
               <div class="rating-item">
-                <span class="text-box">整洁卫生<b>5</b>分</span>
-                <span class="text-box">交通位置<b>5</b>分</span>
-                <span class="text-box">管理服务<b>5</b>分</span>
-                <span class="text-box">设施装修<b>5</b>分</span>
+                <span class="text-box">整洁卫生<b><?php echo $evaluation_score['clean_val'] == 0 ? 5 : $evaluation_score['clean_val'];?></b>分</span>
+                <span class="text-box">交通位置<b><?php echo $evaluation_score['traffic_val'] == 0 ? 5 : $evaluation_score['traffic_val'];?></b>分</span>
+                <span class="text-box">管理服务<b><?php echo $evaluation_score['manage_val'] == 0 ? 5 : $evaluation_score['manage_val'];?></b>分</span>
+                <span class="text-box">设施装修<b><?php echo $evaluation_score['facility_val'] == 0 ? 5 : $evaluation_score['facility_val'];?></b>分</span>
               </div>
             </div>
           </div>

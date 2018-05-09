@@ -97,6 +97,15 @@ class Order_model extends CI_Model {
     return $this -> db -> affected_rows();
   }
 
+  public function get_order_evaluation_by_house_id($house_id){
+    $sql = "select * from t_order_evaluation where house_id = $house_id";
+    return $this -> db -> query($sql) -> result();
+  }
+
+  public function get_order_evaluation_count_by_house_id($house_id){
+    $sql = "select * from t_order_evaluation where house_id = $house_id";
+    return $this -> db -> query($sql) -> num_rows();
+  }
 
 
 
