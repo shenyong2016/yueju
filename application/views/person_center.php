@@ -42,7 +42,7 @@
   <?php include 'header.php';?>
   <!-- header -->
   
-  <div id="person">
+  <div id="person" v-loading="loading">
     <div class="wrapper">
       <!-- left-sideBar开始 -->
       <div class="sidebar-container">
@@ -241,6 +241,7 @@
     new Vue({
       el: '#person',
       data: {
+        loading: false,
         tourList: [],//游记列表
         finishedOrderList: [],//已完成订单列表
         unfinishedOrderList: [],//未完成订单列表
@@ -419,6 +420,7 @@
           });
         },
         loadTourList(page){//获取游记列表
+          this.loading = true;
           axios.get('tour/get_tour_self_list', {
             params: {
               tourPageSize: this.tourPageSize,page
@@ -426,9 +428,11 @@
           }).then(res => {
             this.tourList = res.data.tour;
             this.tourCount = res.data.tour_count;
+            this.loading = false;          
           });
         },
         loadFinishedOrderList(page){
+          this.loading = true;
           axios.get('order/get_finished_order', {
             params: {
               finishPageSize: this.finishPageSize, page
@@ -436,9 +440,11 @@
           }).then(res => {
             this.finishedOrderList = res.data.order;
             this.finishedOrderCount = res.data.order_count;
+            this.loading = false;
           });
         },
         loadUnfinishedOrderList(page){
+          this.loading = true;
           axios.get('order/get_unfinished_order', {
             params: {
               unfinishPageSize: this.unfinishPageSize, page
@@ -447,9 +453,11 @@
             // console.log(res);
             this.unfinishedOrderList = res.data.order;
             this.unfinishedOrderCount = res.data.order_count;
+            this.loading = false;            
           });
         },
         loadUserInfo(){
+          this.loading = true;          
           axios.get('welcome/get_user_info').then(res => {
             // console.log(res);
             var userInfo = res.data;
@@ -459,6 +467,7 @@
             this.headImg = userInfo.head_img;
             this.oldPass = userInfo.password;
             this.userId = userInfo.user_id;
+            this.loading = false;                      
           });
         },
         deleteTour(tourId){

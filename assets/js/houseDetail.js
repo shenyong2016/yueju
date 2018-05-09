@@ -43,7 +43,7 @@ $(function(){
 
   // 获取该房源已经预定的时间
   var houseId = $('.filter-btn').data('house-id');
-  var disabledDays = [];  
+  var disabledDays = []; //datepicker中不能预定的房源的日期 
   $.ajax({
     type: 'get',
     url: 'order/get_house_reserve_time',
@@ -65,8 +65,8 @@ $(function(){
         var endTime = getDate(end);
         while((endTime.getTime()-startTime.getTime())>=0){
           var year = startTime.getFullYear();
-          var month = startTime.getMonth().toString().length==1?"0"+startTime.getMonth().toString():startTime.getMonth();
-          var day = startTime.getDate().toString().length==1?"0"+startTime.getDate():startTime.getDate();
+          var month = startTime.getMonth().toString().length==1 ? "0"+startTime.getMonth().toString() : startTime.getMonth();
+          var day = startTime.getDate().toString().length==1 ? "0"+startTime.getDate() : startTime.getDate();
           startTime.setDate(startTime.getDate()+1);
           disabledDays.push(year+"-"+month+"-"+day);    
         }

@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="assets/css/datePicker.css">
   <link rel="stylesheet" href="assets/css/picZoom.css">
   <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/elementUI.css">  
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">  
   
   <style>
     .pagination{
@@ -41,7 +43,7 @@
 </head>
 <body>
   <?php include 'header.php';?>
-  <div id="house-center">
+  <div id="house-center" v-loading="loading">
     <div class="wrapper">
       <!-- 搜索框 -->
       <form id="search_area" method="post" onsubmit="return false;" class="search">
@@ -199,10 +201,12 @@
   <script src="assets/js/vue.min.js"></script>
   <script src="assets/js/axios.min.js"></script>  
   <script src="assets/js/pagination.js"></script>
+  <script src="assets/js/elementUI.js"></script>    
   <script>
       var houseCenter = new Vue({
         el: '#house-center',
         data: {
+          loading: false,
           houseList: [],  
           houseCount: 0,
           minPrice: '',//最低价
@@ -248,7 +252,8 @@
           },
           loadHouseData(page){
             var { pageSize,content,region,minPrice,maxPrice,
-                  houseSize,villageType,saleType } = this;            
+                  houseSize,villageType,saleType } = this;  
+            this.loading = true;
             axios.get('house/get_houses', {
               params:{
                 pageSize,page,content,region,
@@ -257,11 +262,13 @@
             }).then(res => {
               this.houseList = res.data.house_info;
               this.houseCount = res.data.house_count;
-              this.pageFlag = false;            
+              this.pageFlag = false;
+              this.loading = false;            
             });
           }
         },
         created(){
+          // var url = "http://localhost/yueju/house/search_index?minPrice=&maxPrice=&content=";
           // var params = window.location.href.split('?')[1].split('&');
           // this.minPrice = params[0].split('=')[1];
           // this.maxPrice = params[1].split('=')[1];

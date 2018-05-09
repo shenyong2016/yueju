@@ -192,7 +192,7 @@
         return;
       }
       if(!startTime || !endTime){
-        alert('请选择入住时间或退房时间');
+        alert('请选择入住时间和退房时间');
         return;
       }
       window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;
