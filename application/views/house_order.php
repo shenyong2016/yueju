@@ -160,7 +160,7 @@
         getTotalPrice(){
           var startTime = new Date(this.startTime).getTime();
           var endTime = new Date(this.endTime).getTime();
-          var totalDays = Math.floor(endTime-startTime)/(24*3600*1000);
+          var totalDays = Math.floor((endTime-startTime)/(24*3600*1000));
           this.unitPrice = Number(this.houseData.house_price);
           this.totalPrice = totalDays * this.unitPrice;
         }

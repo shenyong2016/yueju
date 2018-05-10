@@ -65,6 +65,9 @@
   <?php include 'footer.php';?>
   <!-- footer -->
 
+  <!-- dialog -->
+  <?php include 'dialog.php';?>
+  <!-- dialog -->
   <input type="hidden" id="current-index" value="tour">    
   <script src="assets/js/jquery-1.12.4.min.js"></script>
   <script src="assets/js/vue.min.js"></script>

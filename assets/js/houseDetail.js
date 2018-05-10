@@ -40,10 +40,12 @@ $(function(){
     $infoContent.eq($(this).index())
     .show().siblings().hide();
   });
-
+ 
+  
   // 获取该房源已经预定的时间
   var houseId = $('.filter-btn').data('house-id');
   var disabledDays = []; //datepicker中不能预定的房源的日期 
+  
   $.ajax({
     type: 'get',
     url: 'order/get_house_reserve_time',
@@ -55,7 +57,7 @@ $(function(){
       for(var i=0; i<timeData.length; i++){
         var start = timeData[i].start_time;
         var end = timeData[i].end_time;
-        // 获取某一时间段内的所有时间
+        // 获取某一时间区间内的所有时间
         function getDate(datestr){
           var temp = datestr.split("-");
           var date = new Date(temp[0],temp[1],temp[2]);
@@ -68,12 +70,13 @@ $(function(){
           var month = startTime.getMonth().toString().length==1 ? "0"+startTime.getMonth().toString() : startTime.getMonth();
           var day = startTime.getDate().toString().length==1 ? "0"+startTime.getDate() : startTime.getDate();
           startTime.setDate(startTime.getDate()+1);
-          disabledDays.push(year+"-"+month+"-"+day);    
+          disabledDays.push(year+"-"+month+"-"+day);
         }
-        // 获取某一时间段内的所有时间        
+        // 获取某一时间区间内的所有时间        
       }
     },
   });
+  
 
   // 时间组件
   // var disabledDays=["2018-05-12","2018-05-14","2018-06-16","2018-10-16"];
@@ -127,6 +130,56 @@ $(function(){
       return [true];
     }
   }); 
+
+
+  //点击预定跳转页面 
+  $('.filter-btn').on('click', function(){
+    var houseId = $(this).data('house-id');    
+    var startTime = $( "#stayIn" ).val();
+    var endTime = $( "#checkOut" ).val();
+    var user = $(this).data('user');
+    // console.log(typeof startTime+':'+endTime);
+    var timeList = [];
+    if(!user){
+      alert('请用户先登录');
+      $('#dialog').show(600);      
+      return;
+    }
+    if(!startTime || !endTime){
+      alert('请选择入住时间和退房时间');
+      return;
+    }
+    // 获取某一时间区间内的所有时间            
+    function getDate(datestr){
+      var temp = datestr.split("-");
+      var date = new Date(temp[0],temp[1],temp[2]);
+      return date;
+    }
+    var start = getDate(startTime);
+    var end = getDate(endTime);
+    while((end.getTime()-start.getTime())>=0){
+      var year = start.getFullYear();
+      var month = start.getMonth().toString().length==1 ? "0"+start.getMonth().toString() : start.getMonth();
+      var day = start.getDate().toString().length==1 ? "0"+start.getDate() : start.getDate();
+      start.setDate(start.getDate()+1);
+      timeList.push(year+"-"+month+"-"+day);
+    }
+    // 获取某一时间区间内的所有时间            
+    var isExist = false;
+    for(var i=0; i<timeList.length; i++){
+      for(var j=0; j<disabledDays.length; j++){
+        if(timeList[i] == disabledDays[j]){
+          isExist = true;
+        }
+      }
+    }
+    if(isExist){
+      alert('该房源在此时间已经被预定，请另选时间');
+      return;
+    }else{
+      window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;    
+    }
+  });
   
 
 

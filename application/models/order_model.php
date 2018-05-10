@@ -65,7 +65,7 @@ class Order_model extends CI_Model {
     return $this -> db -> affected_rows();
   }
 
-  public function check_house_reserve_by_time($house_id){
+  public function get_reserve_house_time($house_id){
     $sql = "select start_time, end_time from t_order where house_id=$house_id and is_delete = 0";
     return $this -> db -> query($sql) -> result();
   }

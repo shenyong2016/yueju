@@ -22,18 +22,18 @@
   <!-- 轮播图 -->
   <div id="slide-box">
     <div class="slide-imgs">
-      <img style="z-index:-1;" src="assets/img/slide/banner-1.jpeg" alt="">
+      <img style="z-index:-1;" src="assets/img/slide/banner-5.jpeg" alt="">
       <img style="z-index:-2;" src="assets/img/slide/banner-2.jpeg" alt="">
       <img style="z-index:-3;" src="assets/img/slide/banner-3.jpeg" alt="">
       <img style="z-index:-4;" src="assets/img/slide/banner-4.jpeg" alt="">
-      <img style="z-index:-5;" src="assets/img/slide/banner-5.jpeg" alt="">
+      <img style="z-index:-5;" src="assets/img/slide/banner-1.jpeg" alt="">
     </div>
     <ul class="slide-tab" style="z-index: 0">
-      <li><img class="slide-tab-active" src="assets/img/slide/banner-1.jpeg" alt=""></li>
+      <li><img class="slide-tab-active" src="assets/img/slide/banner-5.jpeg" alt=""></li>
       <li><img src="assets/img/slide/banner-2.jpeg" alt=""></li>
       <li><img src="assets/img/slide/banner-3.jpeg" alt=""></li>
       <li><img src="assets/img/slide/banner-4.jpeg" alt=""></li>
-      <li><img src="assets/img/slide/banner-5.jpeg" alt=""></li>
+      <li><img src="assets/img/slide/banner-1.jpeg" alt=""></li>
     </ul>
   </div>
   <!-- 轮播图 -->
@@ -87,7 +87,7 @@
           <div class="house-desc">
             <p>
               <span class="house-info">{{house.village_name}} {{house.house_name}}</span>
-              <span class="house-price">￥{{house.house_price}}</span>
+              <span class="house-price">￥{{house.house_price}}.00</span>
             </p>
             <p>{{house.house_address}}</p>
           </div>

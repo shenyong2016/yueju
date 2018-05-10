@@ -167,7 +167,7 @@
           <div class="house-desc">
             <p>
               <span class="house-info">{{houseItem.village_name}} {{houseItem.house_name}}</span>
-              <span class="house-price">{{houseItem.house_price}}</span>
+              <span class="house-price">{{houseItem.house_price}}.00</span>
             </p>
             <p>{{houseItem.house_address}}</p>
           </div>

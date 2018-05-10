@@ -52,7 +52,7 @@
             <p class="title">
               <span class="house-address"></span>
               哈尔滨市 > <?php echo $house_info -> house_location?> > <?php echo $house_info -> house_address;?>
-              <span class="price">￥228.0</span>
+              <span class="price">￥<?php echo $house_info->house_price;?>.00</span>
             </p>
           </div>
           <div class="date-change-box" >
@@ -178,25 +178,9 @@
     var marker = new BMap.Marker(point, {icon: myIcon});    
     map.addOverlay(marker);   
     
-    //点击预定跳转页面 
-  
-    $('.filter-btn').on('click', function(){
-      var houseId = $(this).data('house-id');    
-      var startTime = $( "#stayIn" ).val();
-      var endTime = $( "#checkOut" ).val();
-      var user = $(this).data('user');
-      // console.log(typeof startTime+':'+endTime);
-      if(!user){
-        alert('请用户先登录');
-        $('#dialog').show(600);      
-        return;
-      }
-      if(!startTime || !endTime){
-        alert('请选择入住时间和退房时间');
-        return;
-      }
-      window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;
-    });
+    
+
+    
 
 
   

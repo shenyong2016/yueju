@@ -17,12 +17,15 @@ class Order extends CI_Controller {
     $this -> load -> view('order_confirm');
   }
 
-  // 检查该房源是否可以预定
+  // 查询某房源的所有预定时间
   public function get_house_reserve_time(){
     $house_id = $this -> input -> get('houseId');
-    $order_time_list = $this -> order_model -> check_house_reserve_by_time($house_id);
+    $order_time_list = $this -> order_model -> get_reserve_house_time($house_id);
     echo json_encode($order_time_list);  
   }
+
+  
+
   // 提交订单
   public function submit_order(){
     $real_name = $this -> input -> get('realName');
