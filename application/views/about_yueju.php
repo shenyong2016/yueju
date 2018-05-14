@@ -37,7 +37,7 @@
           <?php 
             $content = explode('。',$yueju_info->yueju_content);
             for($i=0; $i<count($content); $i++){
-              echo '<p>'. $content[$i] .'</p>';
+              echo '<p>'. $content[$i] .'。</p>';
             }
           ?>
         </div>

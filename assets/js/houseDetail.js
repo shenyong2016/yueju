@@ -2,6 +2,7 @@ $(function(){
   // 房屋图片切换
   $imgs = $('.house-imgs img');
   $tabs = $('.house-tab li');
+  console.log($imgs.length);
   var iNow = 0;
   $('.house-container').hover(function(){
     $('.left-btn, .right-btn').show();
@@ -17,12 +18,12 @@ $(function(){
 
   $('.left-btn').on('click', function(){
     iNow++;
-    iNow = iNow == 4 ? 0 : iNow;
+    iNow = iNow == $imgs.length ? 0 : iNow;
     changeImgs(iNow);
   });
   $('.right-btn').on('click', function(){
     iNow--;
-    iNow = iNow == -1 ? 3 : iNow;
+    iNow = iNow == -1 ? ($imgs.length-1) : iNow;
     changeImgs(iNow);
   });
   function changeImgs(index){
