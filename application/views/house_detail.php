@@ -28,7 +28,7 @@
           <?php 
             foreach($house_imgs as $img_item){
           ?>
-            <img src="<?php echo $img_item -> img_src?>" alt="">
+            <img src="<?php echo '../../'.$img_item -> img_src?>" alt="">
           <?php
             }
           ?>
@@ -88,8 +88,8 @@
                 <ul>
                   <li><span class="list-title">小区名称</span><p class="detail-info"><?php echo $house_info -> village_name;?></p></li>
                   <li><span class="list-title">房间类型</span><p class="detail-info"><?php echo $house_info -> house_type;?></p></li>
-                  <li><span class="list-title">使用面积</span><p class="detail-info"><?php echo $house_info -> house_user_area;?></p></li>
-                  <li><span class="list-title">建筑面积</span><p class="detail-info"><?php echo $house_info -> house_build_area;?></p></li>
+                  <li><span class="list-title">使用面积</span><p class="detail-info"><?php echo $house_info -> house_user_area;?>.00平方米</p></li>
+                  <li><span class="list-title">建筑面积</span><p class="detail-info"><?php echo $house_info -> house_build_area;?>.00平方米</p></li>
                   <li><span class="list-title">交通情况</span><p class="detail-info"><?php echo $house_info -> house_traffic;?></p></li>
                   <li><span class="list-title">房源详情</span><p class="detail-info"><?php echo $house_info -> house_details;?></p></li>
                 </ul>
@@ -123,7 +123,7 @@
             foreach($house_recommended as $houseItem){
           ?>
             <li>
-              <a href="house/detail/<?php echo $houseItem -> house_id?>"><img src="<?php echo $houseItem -> img_src;?>" alt=""></a>
+              <a href="house/detail/<?php echo $houseItem -> house_id?>"><img src="<?php echo '../../'.$houseItem -> img_src;?>" alt=""></a>
               <p>
                  <?php echo $houseItem -> village_name;?> <?php echo $houseItem -> house_name;?>
                 <span>￥<?php echo $houseItem -> house_price;?></span>

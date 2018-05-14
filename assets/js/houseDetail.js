@@ -139,7 +139,7 @@ $(function(){
     var endTime = $( "#checkOut" ).val();
     var user = $(this).data('user');
     // console.log(typeof startTime+':'+endTime);
-    var timeList = [];
+    var timeList = [];//入住时间与退房时间之间的所有时间
     if(!user){
       alert('请用户先登录');
       $('#dialog').show(600);      
@@ -176,9 +176,8 @@ $(function(){
     if(isExist){
       alert('该房源在此时间已经被预定，请另选时间');
       return;
-    }else{
-      window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;    
     }
+    window.location.href = 'order/house_order?houseId='+houseId+'&startTime='+startTime+'&endTime='+endTime;    
   });
   
 

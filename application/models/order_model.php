@@ -6,7 +6,7 @@ class Order_model extends CI_Model {
             h.house_name,h.village_name,h.house_address,i.img_src
             from t_order o, t_house_info h, t_house_img i 
             where o.house_id = h.house_id and h.house_id = i.house_id 
-            and i.is_main = 1 and o.is_finished = 1 and o.is_delete = 0 
+            and i.is_main = 1 and o.is_finished = 2 and o.is_delete = 0 
             and o.user_id = $user_id limit $offset,$limit";
     return $this -> db -> query($sql) -> result();
   }
@@ -16,7 +16,7 @@ class Order_model extends CI_Model {
             h.house_name,h.village_name,h.house_address,i.img_src
             from t_order o, t_house_info h, t_house_img i 
             where o.house_id = h.house_id and h.house_id = i.house_id 
-            and i.is_main = 1 and o.is_finished = 1 and o.is_delete = 0 
+            and i.is_main = 1 and o.is_finished = 2 and o.is_delete = 0 
             and o.user_id = $user_id";
     return $this -> db -> query($sql) -> num_rows();
   }
@@ -26,7 +26,7 @@ class Order_model extends CI_Model {
             h.house_name,h.village_name,h.house_address,i.img_src
             from t_order o, t_house_info h, t_house_img i 
             where o.house_id = h.house_id and h.house_id = i.house_id 
-            and i.is_main = 1 and o.is_finished = 0 and o.is_delete = 0 
+            and i.is_main = 1 and o.is_finished = 1 and o.is_delete = 0 
             and o.user_id = $user_id limit $offset,$limit";
     return $this -> db -> query($sql) -> result();
   }
@@ -36,7 +36,7 @@ class Order_model extends CI_Model {
             h.house_name,h.village_name,h.house_address,i.img_src
             from t_order o, t_house_info h, t_house_img i 
             where o.house_id = h.house_id and h.house_id = i.house_id 
-            and i.is_main = 1 and o.is_finished = 0 and o.is_delete = 0 
+            and i.is_main = 1 and o.is_finished = 1 and o.is_delete = 0 
             and o.user_id = $user_id";
     return $this -> db -> query($sql) -> num_rows();
   }
@@ -82,7 +82,7 @@ class Order_model extends CI_Model {
       'house_id' => $house_id,
     'user_id' => $user_id,
       'order_num' => $order_num,
-      'is_finished' => 0,
+      'is_finished' => 1,
       'is_evaluate' => 0,
       'is_delete' => 0
     ));
@@ -92,7 +92,7 @@ class Order_model extends CI_Model {
   public function update_order_by_finish($order_num){
     $this -> db -> where('order_num', $order_num);
     $this -> db -> update('t_order', array(
-        'is_finished' => 1
+        'is_finished' => 2
     ));
     return $this -> db -> affected_rows();
   }

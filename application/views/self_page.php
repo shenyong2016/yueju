@@ -102,7 +102,7 @@
           <div class="fine-community">
             <h4>社区精选</h4>
             <a v-for="house in recommenedHouseList" :href="`house/detail/${house.house_id}`">
-              <div :style="`background-image: url(${house.img_src})`" class="fine-community-show">{{house.house_name}}</div>
+              <div :style="`background-image: url(../../${house.img_src})`" class="fine-community-show">{{house.house_name}}</div>
             </a>
           </div>
 

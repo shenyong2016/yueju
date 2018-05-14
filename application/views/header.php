@@ -15,7 +15,7 @@
           <?php if($loginedUser){
           ?>
             <a href="welcome/user" style="color: rgb(169, 142, 103);"><?php echo $loginedUser -> username;?>已登录</a> 
-            <a href="welcome/logout">退出</a>             
+            <a href="welcome/logout">注销</a>             
           <?php 
             }else{
           ?>

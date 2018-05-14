@@ -55,8 +55,6 @@
             <li>动力区</li> 
             <li>道里区</li> 
             <li>道外区</li> 
-            <li>呼兰区</li> 
-            <li>双城区</li> 
             <li>江北区</li>
           </ul>
         </div> 
@@ -161,7 +159,7 @@
           <a :href="'house/detail/'+houseItem.house_id">
             <div class="pic-box">
               <div class="house-mask"></div>          
-              <img :src="houseItem.img_src" alt="">
+              <img :src="`../../${houseItem.img_src}`" alt="">
             </div>
           </a>
           <div class="house-desc">
@@ -240,7 +238,7 @@
             this.loadHouseData(this.page);
           },
           searchHouseByVillage(){
-            this.pageFlag = true;            
+            this.pageFlag = true;       
             this.villageType = this.villageTypeList.join(',');
             this.loadHouseData(this.page);
           },
@@ -248,6 +246,7 @@
             this.content = this.$refs.content.value;
             this.region = this.$refs.region.value;          
             this.pageFlag = true;
+            console.log(this.region);
             this.loadHouseData(this.page);
           },
           loadHouseData(page){

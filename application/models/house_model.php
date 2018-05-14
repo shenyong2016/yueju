@@ -3,7 +3,8 @@ class House_model extends CI_Model {
   
   public function get_house_by_village_type($village_type){
     $sql = 'select h.*, i.img_src from t_house_info h, t_house_img i 
-            where h.house_id = i.house_id and I.is_main = 1 and h.village_type ='.$village_type.' limit 3';
+            where h.house_id = i.house_id and I.is_main = 1 and is_delete = 0
+            and h.village_type ='.$village_type.' limit 3';
     return $this -> db -> query($sql) -> result();  
   }
   
@@ -19,7 +20,8 @@ class House_model extends CI_Model {
 
   public function get_recommened_house(){
     $sql = 'select h.*, i.img_src from t_house_info h, t_house_img i 
-            where h.house_id = i.house_id and i.is_main = 1 and h.house_recommened =1 limit 3';
+            where h.house_id = i.house_id and i.is_main = 1 and is_delete = 0
+            and h.house_recommened =1 limit 3';
     return $this -> db -> query($sql) -> result();
   }
 
@@ -29,7 +31,7 @@ class House_model extends CI_Model {
                              $max_price,$house_size,$village_type,$sale_type){
     $sql = "select h.house_id, h.house_name, h.village_name, h.house_price, 
             h.house_address, i.img_src from t_house_info h, t_house_img i 
-            where h.house_id  = i.house_id and i.is_main = 1";
+            where h.house_id  = i.house_id and i.is_main = 1 and is_delete = 0";
     if($region){
       $sql .= " and h.house_location = '$region'";
     }
@@ -60,7 +62,7 @@ class House_model extends CI_Model {
                                     $house_size,$village_type,$sale_type){
     $sql = "select h.house_id, h.house_name, h.village_name, h.house_price, 
             h.house_address, i.img_src from t_house_info h, t_house_img i 
-            where h.house_id  = i.house_id and i.is_main = 1";
+            where h.house_id  = i.house_id and i.is_main = 1 and is_delete = 0";
     if($region){
       $sql .= " and h.house_location = '$region'";
     }

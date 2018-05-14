@@ -88,7 +88,7 @@
                   foreach($house_list as $house){
                 ?>
                 <a href="house/detail/<?php echo $house->house_id;?>">
-                  <div style="background-image: url(<?php echo $house->img_src;?>)" class="fine-community-show"><?php echo $house->house_name;?></div>
+                  <div style="background-image: url(<?php echo '../../'.$house->img_src;?>)" class="fine-community-show"><?php echo $house->house_name;?></div>
                 </a>
                 <?php
                   }

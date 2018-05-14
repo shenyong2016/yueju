@@ -81,7 +81,7 @@
           <a :href="'house/detail/'+house.house_id">
             <div class="pic-box">
               <div class="house-mask"></div>          
-              <img :src="house.img_src" alt="">
+              <img :src="`../../${house.img_src}`" alt="">
             </div>
           </a>
           <div class="house-desc">

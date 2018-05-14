@@ -25,7 +25,7 @@
           <div class="house-group">
             <a :href="`house/detail/${orderInfo.house_id}`">
               <div class="pic-box">
-                <img :src="orderInfo.img_src" alt="">
+                <img :src="`../../${orderInfo.img_src}`" alt="">
               </div>
             </a>
           </div>

@@ -26,7 +26,7 @@
         <img v-else src="assets/img/head-default.png" alt="">
         <div class="info-left">
           <span class="author">
-            <a href="welcome/user">{{tourData.username}}</a>
+            <a :href="`welcome/selfpage/${tourData.user_id}`">{{tourData.username}}</a>
           </span>
           <span>{{tourData.publish_time}}</span>
         </div>
@@ -48,7 +48,7 @@
             <li v-for="house in houseList">
               <a :href="'house/detail/'+house.house_id">
                 <div>
-                  <img :src="house.img_src" alt="">
+                  <img :src="`../../${house.img_src}`" alt="">
                 </div>
                 <p>{{house.village_name}} {{house.house_name}}</p>
                 <div class="bind">

@@ -118,7 +118,7 @@
             });
             return;
           }
-          if(!/^(13|15|17)\d{9}$/.test(this.phoneNum) || !/^(13|15|17)\d{9}$/.test(this.emergencyTel)){
+          if(!/^(13|15|17|18)\d{9}$/.test(this.phoneNum) || !/^(13|15|17|18)\d{9}$/.test(this.emergencyTel)){
             this.$message({
               type: 'warning',
               message: '请填写正确的手机号码',

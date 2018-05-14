@@ -88,7 +88,7 @@
                 <div class="house-detail">
                   <a :href="`house/detail/${order.house_id}`">
                     <div class="img-container">
-                      <img :src="order.img_src" alt="">
+                      <img :src="`../../${order.img_src}`" alt="">
                     </div>
                     <ul class="house-description">
                       <li class="house-detail-title">{{order.village_name}} {{order.house_name}}</li>
@@ -118,7 +118,7 @@
                 <div class="house-detail">
                   <a :href="`house/detail/${order.house_id}`">
                     <div class="img-container">
-                      <img :src="order.img_src" alt="">
+                      <img :src="`../../${order.img_src}`" alt="">
                     </div>
                     <ul class="house-description">
                       <li class="house-detail-title">{{order.village_name}} {{order.house_name}}</li>
