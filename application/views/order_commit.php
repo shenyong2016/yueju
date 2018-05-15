@@ -63,7 +63,7 @@
           </p>
           <p class="order-list">
             <span class="order-list-title">订单费用：</span>
-            <span class="order-list-con">￥{{orderInfo.total_price}}</span>
+            <span class="order-list-con">￥{{orderInfo.total_price}}.00元</span>
           </p>
         </div>
       </div>

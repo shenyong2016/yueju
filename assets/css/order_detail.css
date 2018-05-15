@@ -132,10 +132,11 @@
 }
 .go-comment{
   margin-left: 624px;
-}
-.go-comment:hover{
   color: #10a07d;
+  text-decoration: underline;  
+  font-size: 16px;
 }
+
 .submit-comment{
   width: 181px;
   height: 49px;

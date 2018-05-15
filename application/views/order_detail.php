@@ -62,7 +62,7 @@
           </p>
           <p class="order-list">
             <span class="order-list-title">订单费用：</span>
-            <span class="order-list-con">￥{{orderInfo.total_price}}</span>
+            <span class="order-list-con">￥{{orderInfo.total_price}}.00元</span>
           </p>
         </div>
       </div>
@@ -110,7 +110,7 @@
         <div v-else>
           <p class="order-status">
             <i class="el-icon-info no-comment"></i><span>未评价</span>
-            <a :href=`order/order_commit?order_num=${orderNum}` class="go-comment">去评价</a>
+            <a :href=`order/order_commit?order_num=${orderNum}` class="go-comment">马上评价</a>
           </p>
         </div>
       </div>
