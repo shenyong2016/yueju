@@ -40,17 +40,20 @@
   <div id="edit-tour">
     <div class="wrapper">
       <div class="baner">
-        <img src="assets/img/add_blog.jpg" alt="">
+        <!-- 文章头图 -->
+        <div class="blog-img">
+          <img v-if="imgSrc" :src="imgSrc" alt="">
+          <img v-else src="assets/img/add_blog.jpg" alt="">
+          <!-- <p  v-if="imgSrc" class="delete-img">
+              <span v-on:click="deleteImg"></span>
+          </p> -->
+        </div>
+        <!-- 文章头图 --> 
+
         <div class="demo">
           <div class="upload-btn">
-            <h2 v-on:click="clickFile">上传文章头图</h2>
+            <h2 v-on:click="clickFile">{{tourId ? '修改' : '上传'}}文章头图</h2>
             <input v-on:change="uploadImg" ref="upload" type="file" accept="image/gif, image/jpeg,image/png,image/jpg">
-          </div>
-          <div class="upload-img" v-if="!imgSrc == ''">
-            <img :src="imgSrc" alt="">
-            <p class="delete-img">
-              <span v-on:click="deleteImg"></span>
-            </p>
           </div>
         </div>
       </div>
@@ -140,7 +143,9 @@
           oUploadImg.click();
         },
         uploadImg(){
-          // this.
+          if(this.imgSrc){
+            this.deleteImg();
+          }
           var oFormData = new FormData();
           var oUploadImg = this.$refs.upload;          
           oFormData.append('img', oUploadImg.files[0]);
@@ -228,12 +233,12 @@
               tourId: this.tourId
             }
           }).then(res => {
-            console.log(res);
             var tour = res.data.tour;
             this.imgSrc = tour.tour_img_src;
             this.title = tour.tour_title;
             this.content = tour.tour_content;
             this.dynamicTags = tour.tour_tag.split('-');
+            console.log('imgSrc===', this.imgSrc);
           });
         }
       },

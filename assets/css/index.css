@@ -97,12 +97,12 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  background:url("../img/date-icon.png") 0 0 no-repeat;
+  /* background:url("../img/date-icon.png") 0 0 no-repeat; */
   right:13px;
   top:8px;
 }
 .search-content .search-icon{
-  background:url("../img/search-icon.png") 0 0 no-repeat;
+  /* background:url("../img/search-icon.png") 0 0 no-repeat; */
 }
 .search-btn {
   width: 124px;

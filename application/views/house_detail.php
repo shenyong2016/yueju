@@ -87,6 +87,8 @@
               <div class="list-info">
                 <ul>
                   <li><span class="list-title">小区名称</span><p class="detail-info"><?php echo $house_info -> village_name;?></p></li>
+                  <li><span class="list-title">房源名称</span><p class="detail-info"><?php echo $house_info -> house_name;?></p></li> 
+                  <li><span class="list-title">是否可售</span><p class="detail-info"><?php echo $house_info -> sale_type == 2 ? '可售' : '不可售';?></p></li>                                                     
                   <li><span class="list-title">房间类型</span><p class="detail-info"><?php echo $house_info -> house_type;?></p></li>
                   <li><span class="list-title">使用面积</span><p class="detail-info"><?php echo $house_info -> house_user_area;?>.00平方米</p></li>
                   <li><span class="list-title">建筑面积</span><p class="detail-info"><?php echo $house_info -> house_build_area;?>.00平方米</p></li>

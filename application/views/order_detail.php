@@ -158,8 +158,10 @@
         }
       },
       created(){
-        this.orderNum = window.location.href.split('?')[1].split('=')[1];        
-        this.loadOrderData();
+        this.orderNum = window.location.href.split('?')[1].split('=')[1]; 
+        if(this.orderNum){
+          this.loadOrderData();          
+        }       
       }
     });
   

@@ -49,18 +49,14 @@ class Welcome extends CI_Controller {
   public function login(){
     $username = $this -> input -> post('username');
     $password = $this -> input -> post('password');
-    $check_username = $this -> user_model -> check_username($username);
-    $check_password = $this -> user_model -> check_password($password);    
+    // $check_username = $this -> user_model -> check_username($username);
+    // $check_password = $this -> user_model -> check_password($password);    
     $check_user = $this -> user_model -> check_login($username, $password);
-    if(!$check_username && $check_password){
-      echo 1;
-    }else if($check_username && !$check_password){
-      echo 2;
-    }else if(!$check_username && !$check_password){
-      echo 3;
-    }else{
-      $this -> session -> set_userdata('loginedUser', $check_user);
+    if($check_user){
       echo 'success';
+      $this -> session -> set_userdata('loginedUser', $check_user);            
+    }else{
+      echo 'fail';
     }
   }
 
