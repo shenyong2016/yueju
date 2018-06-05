@@ -38,8 +38,8 @@
           <el-tag v-for="tag in tourTagList"
             :type="tag.type">{{tag.name}}</el-tag>
         </div>
-        <div class="blog-content">
-          <p v-for="item in tourContent">{{item}}。</p>
+        <div class="blog-content" v-html="tourContent">
+          <!-- {{-tourContent}} -->
         </div>
       </div>
       <div id="blog-side-bar">
@@ -82,7 +82,7 @@
         houseList: [],
         tourData: {},
         tourTagList: [],
-        tourContent: []
+        tourContent: ''
       },
       created(){
         // console.log(this.tourId);
@@ -93,7 +93,7 @@
         }).then(res => {
           this.houseList = res.data.house;
           this.tourData = res.data.tour;
-          this.tourContent = res.data.tour.tour_content.split('。');
+          this.tourContent = res.data.tour.tour_content.replace(/^/gm, '<p>').replace(/$/gm, '</p>');
           console.log(this.tourContent);
           var tageType = ['success','info','warning','danger'];
           var tourTag = this.tourData.tour_tag.split('-');

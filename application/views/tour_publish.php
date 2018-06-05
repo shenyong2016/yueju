@@ -188,6 +188,13 @@
               type: 'warning'
             });
             return;
+          }else if(title.length > 35){
+            this.$message({
+              showClose: true,
+              message: '标题不得超过35个字',
+              type: 'warning'
+            });
+            return;
           }else if(!content){
             this.$message({
               showClose: true,
